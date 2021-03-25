@@ -465,9 +465,10 @@ $JSON = @"
   
         for ($i = 0; $i -lt $Devices.Count; $i++) {
             for ($ii = 0; $ii -lt $Users.Count; $ii++) {
-                If ($Devices[$i].userPrincipalName -eq $Users[$ii].userPrincipalName)
-                {Add-AADGroupMember -GroupId $DeviceGroup.id -AADMemberId (Get-AADdevice($Devices[$i].azureADDeviceId)).id
-                Write-Host "Adding:  "$i " "  $($Devices[$i].DeviceName) " " $($Devices[$i].azureADDeviceId) " "$Devices[$i].userPrincipalName}
+                If ($Devices[$i].userPrincipalName -eq $Users[$ii].userPrincipalName){               
+                Write-Host "Adding:  "$i " "  $($Devices[$i].DeviceName) " " $($Devices[$i].azureADDeviceId) " "$Devices[$i].userPrincipalName
+                Add-AADGroupMember -GroupId $DeviceGroup.id -AADMemberId (Get-AADdevice($Devices[$i].azureADDeviceId)).id                
+                }
             }
         }         
     }
