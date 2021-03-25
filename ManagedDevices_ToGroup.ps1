@@ -1,7 +1,7 @@
 <#
 Adding managed devices to an AAD group, based on primary user group membership.
 Useful for Intune delegation scenario.
-
+Modified from https://github.com/microsoftgraph/powershell-intune-samples/blob/master/ManagedDevices/ManagedDevices_Add_ToAADGroup.ps1
 
 
 .COPYRIGHT
