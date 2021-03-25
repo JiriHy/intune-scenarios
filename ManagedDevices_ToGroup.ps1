@@ -445,8 +445,8 @@ $JSON = @"
     
     
 
-    $UserGroupName = "Usergroup"
-    $DeviceGroupName = "Devicegroup"
+    $UserGroupName = "AD users"
+    $DeviceGroupName = "_ADusers_devices_personal"
     $Users = Get-AADGroupMembers $UserGroupName
     $Devices = Get-ManagedDevices
     $UserGroup = Get-AzADGroup $UserGroupName
